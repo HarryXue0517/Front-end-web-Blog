@@ -1,0 +1,151 @@
+.heading {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0 20px; /* 增加左右的padding，确保在大屏幕时元素和屏幕边界有距离 */
+}
+
+.heading > div {
+    width: 160px;
+    height: 35px;
+    display: flex;
+    margin: 10px;
+    text-align: center;
+    justify-content: center;
+    font-size: 28px;
+    align-items: center; /* 垂直居中 */
+}
+
+.heading > .Right-heading {
+    display: flex;
+    flex-wrap: nowrap;
+    width: auto;
+    margin-top: 20px;
+    justify-content: flex-end;
+}
+
+.Right-heading > div {
+    width: auto;
+    height: 35px;
+    display: flex;
+    margin: 10px;
+    text-align: center;
+    justify-content: center;
+    font-size: 28px;
+    align-items: center; /* 垂直居中 */
+}
+
+.heading > .logo {
+    margin-left: 80px;
+}
+
+.heading > .Right-heading > .User-location {
+    margin-left: auto;
+    font-size: 15px;
+    align-items: center; /* 确保 User-location 也垂直居中 */
+}
+
+.heading > .Right-heading > .Sign-in {
+    font-size: 15px;
+    align-items: center; 
+}
+
+.heading > .Right-heading > .Search-bar {
+    font-size: 15px;
+    align-items: center; 
+    border-radius: 20px; /* 圆角设置 */
+    border: 2px solid #000000;
+    width: 300px;
+    padding-right: 30px;
+}
+
+.ads {
+    height: 300px;
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    justify-content: center; /* 水平居中 */
+    align-items: center;     /* 垂直居中 */
+}
+
+.ads > .ads-text {
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    justify-content: center; /* 水平居中 */
+    align-items: center;     /* 垂直居中 */
+    font-size: 15px;
+    border-radius: 20px; /* 圆角设置 */
+    border: 2px solid #000000;
+    width: 300px;
+    height: 200px;
+    font-size: 30px;
+}
+
+.Catagories {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 默认四列 */
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 40px;
+}
+
+.Catagories > div {
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    border-radius: 20px; /* 圆角设置 */
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    height: 280px;
+    width: 200px;
+}
+
+body {
+    margin: 0;
+}
+
+/* 中等屏幕大小：两列布局 */
+@media (max-width: 1200px) {
+    .Catagories {
+        grid-template-columns: repeat(2, 1fr); /* 2列布局 */
+    }
+}
+
+/* 最小屏幕大小：一列布局 */
+@media (max-width: 768px) {
+    .Catagories {
+        grid-template-columns: 1fr; /* 1列布局 */
+    }
+
+    .heading {
+        flex-wrap: wrap; /* 让header部分内容在小屏幕时换行 */
+        padding: 0 10px; /* 确保小屏幕时左右有一些padding */
+    }
+
+    .heading > .Right-heading {
+        flex-direction: column; /* 小屏幕时让右侧的元素纵向排列 */
+        align-items: flex-end; /* 确保右对齐 */
+        margin-top: 10px;
+    }
+
+    .heading > .Right-heading > div {
+        margin: 5px 0; /* 在小屏幕时增加每个元素的上下间距 */
+        width: 100%; /* 确保每个元素在小屏幕时占据整行 */
+    }
+
+    .heading > .Right-heading > .Search-bar {
+        width: 100%; /* 占据整行 */
+        margin: 10px 0;
+    }
+
+    .heading > .Right-heading > .User-location,
+    .heading > .Right-heading > .Sign-in {
+        margin-left: 0; /* 取消左边距 */
+        text-align: right; /* 保持文字靠右对齐 */
+    }
+}
