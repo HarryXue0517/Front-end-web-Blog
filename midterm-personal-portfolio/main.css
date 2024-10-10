@@ -1,0 +1,143 @@
+.heading {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 70px;
+  padding-left: 70px;
+  padding-top: 40px;
+}
+
+.heading-title {
+  width: fit-content;
+  height: min-content;
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 250;
+  font-style: normal;
+  font-size: 38px;
+  display: inline;
+}
+
+.chinese-title {
+  display: inline;
+  font-size: 38px;
+  Font-family: "宋体", sans-serif;
+}
+
+.heading-menu {
+  padding-top: 11px;
+  width: fit-content;
+  height: min-content;
+}
+
+.menu-years > p {
+  display: inline;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+#twofour {
+  padding-right: 30px;
+}
+
+#about-me {
+  display: inline;
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap; /* 允许换行，确保布局换行 */
+  justify-content: space-between; /* 让格子之间有间距，也可以使用 space-around 或 flex-start */
+  width: 70%; /* 将宽度从100%缩小到80% */
+  margin-top: 20px;
+  margin-left: auto; /* 自动调整容器居中 */
+  margin-right: auto; /* 自动调整容器居中 */
+  padding-right: 4%;
+}
+
+.grid-item {
+  flex: 1 1 23%; /* 每个格子占据 23% 的宽度 */
+  height: 380px; /* 设置固定高度 */
+  /* border: 1px solid; */
+}
+
+#one {
+  max-width: 85%; /* 图片的最大宽度不能超过父元素的宽度 */
+  max-height: 85%; /* 图片的最大高度不能超过父元素的高度 */
+  object-fit: cover; /* 图片保持比例，裁剪以填充父容器 */
+  margin-top: 46%;
+  margin-left: 27%;
+}
+
+#two {
+  max-width: 80%; /* 图片的最大宽度不能超过父元素的宽度 */
+  max-height: 80%; /* 图片的最大高度不能超过父元素的高度 */
+  object-fit: cover; /* 图片保持比例，裁剪以填充父容器 */
+  margin-top: 22%;
+  margin-left: 29%;
+}
+
+#three {
+  max-width: 80%; /* 图片的最大宽度不能超过父元素的宽度 */
+  max-height: 80%; /* 图片的最大高度不能超过父元素的高度 */
+  object-fit: cover; /* 图片保持比例，裁剪以填充父容器 */
+  margin-top: 10%;
+  margin-left: 15%;
+}
+
+#four {
+  max-width: 85%; /* 图片的最大宽度不能超过父元素的宽度 */
+  max-height: 85%; /* 图片的最大高度不能超过父元素的高度 */
+  object-fit: cover; /* 图片保持比例，裁剪以填充父容器 */
+  margin-top: 32%;
+}
+
+#five {
+  max-width: 85%; /* 图片的最大宽度不能超过父元素的宽度 */
+  max-height: 85%; /* 图片的最大高度不能超过父元素的高度 */
+  object-fit: cover; /* 图片保持比例，裁剪以填充父容器 */
+  margin-top: 14%;
+  margin-left: 37%;
+}
+
+#six {
+  max-width: 80%; /* 图片的最大宽度不能超过父元素的宽度 */
+  max-height: 80%; /* 图片的最大高度不能超过父元素的高度 */
+  object-fit: cover; /* 图片保持比例，裁剪以填充父容器 */
+  margin-top: 11%;
+  margin-left: 43%;
+}
+
+#seven {
+  max-width: 80%; /* 图片的最大宽度不能超过父元素的宽度 */
+  max-height: 80%; /* 图片的最大高度不能超过父元素的高度 */
+  object-fit: cover; /* 图片保持比例，裁剪以填充父容器 */
+  margin-left: 32%;
+  margin-top: 6%;
+}
+
+#eight {
+  max-width: 85%; /* 图片的最大宽度不能超过父元素的宽度 */
+  max-height: 85%; /* 图片的最大高度不能超过父元素的高度 */
+  object-fit: cover; /* 图片保持比例，裁剪以填充父容器 */
+
+  margin-left: 19%;
+}
+
+.grid-item img {
+  transition: transform 0.5s ease; /* 设置放大效果的过渡时间 */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+.grid-item img:hover {
+  transform: scale(1.6); /* 当鼠标悬停时，图片等比例放大1.2倍 */
+}
+
+
+
+
