@@ -138,6 +138,51 @@
   transform: scale(1.6); /* 当鼠标悬停时，图片等比例放大1.2倍 */
 }
 
+@media (max-width: 1200px) {
+  .grid-container {
+    width: 80%;
+  }
+
+  .grid-item {
+    flex: 1 1 30%;
+  }
+
+  .grid-item img {
+    max-width: 75%;
+    max-height: 75%;
+    margin: 0; /* 移除 margin */
+    display: block;
+    margin-left: auto; /* 水平居中 */
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    width: 95%;
+    padding-right: 0;
+  }
+
+  .grid-item {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+  }
+
+  .grid-item img {
+    max-width: 90%;
+    max-height: 90%;
+    margin: 0; /* 移除 margin */
+  }
+}
+
+
+
+
+
+
 
 
 
