@@ -156,6 +156,10 @@
     max-height: 75%;
     margin: 0 !important; /* 强制移除所有 margin */
   }
+
+  .grid-item img:hover {
+    transform: none !important; /* 禁用图片缩放 */
+  }
 }
 
 @media (max-width: 768px) {
@@ -193,6 +197,10 @@
     width: fit-content;
     height: min-content;
     margin-right: 600px;
+  }
+
+  .grid-item img:hover {
+    transform: none !important; /* 禁用图片缩放 */
   }
 }
 
