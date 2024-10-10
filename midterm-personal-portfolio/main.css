@@ -141,32 +141,33 @@
 @media (max-width: 1200px) {
   .grid-container {
     width: 80%;
+    padding-right: 0 !important; /* 强制移除 padding */
   }
 
   .grid-item {
-    flex: 1 1 30%;
+    flex: 1 1 40%;
+    display: flex; /* 使用 flexbox 布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
   }
 
   .grid-item img {
     max-width: 75%;
     max-height: 75%;
-    margin: 0; /* 移除 margin */
-    display: block;
-    margin-left: auto; /* 水平居中 */
-    margin-right: auto;
+    margin: 0 !important; /* 强制移除所有 margin */
   }
 }
 
 @media (max-width: 768px) {
   .grid-container {
     width: 95%;
-    padding-right: 0;
+    padding-right: 0 !important; /* 强制移除 padding */
   }
 
   .grid-item {
     flex: 1 1 100%;
     margin-bottom: 20px;
-    display: flex;
+    display: flex; /* 使用 flexbox 布局 */
     justify-content: center; /* 水平居中 */
     align-items: center; /* 垂直居中 */
   }
@@ -174,9 +175,29 @@
   .grid-item img {
     max-width: 90%;
     max-height: 90%;
-    margin: 0; /* 移除 margin */
+    margin: 0 !important; /* 强制移除所有 margin */
+  }
+
+  .heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 70px;
+    padding-left: 70px;
+    padding-top: 40px;
+    height:300px;
+  }
+
+  .heading-menu {
+    padding-top: 11px;
+    width: fit-content;
+    height: min-content;
+    margin-right: 600px;
   }
 }
+
+
+
 
 
 
