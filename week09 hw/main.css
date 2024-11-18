@@ -1,0 +1,114 @@
+.hidden {
+    display: none;
+}
+
+#start_screen {
+    color: white;
+}
+
+#play_area {
+    width: 850px;
+    height: 700px;
+    display: none;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+#title > p {
+    font-size: 40px;
+    margin: 0;
+    padding-top: 10px;
+}
+
+#title {
+    width: 830px;
+    height: 80px;
+    margin-top: 10px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+#timer_score > p {
+    font-size: 20px;
+    margin: 0;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
+#timer_score {
+    width: 830px;
+    height: 80px;
+    margin-top: 10px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+#game {
+    width: 600px;
+    height: 450px;
+    margin-top: 60px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 创建3列，等分宽度 */
+    grid-template-rows: repeat(3, 1fr);    /* 创建4行，等分高度 */
+     gap: 8px;                             /* 网格间距，可根据需要调整 */
+    
+}
+
+#game div {
+    aspect-ratio: 1;             /* 确保每个div保持正方形 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+#start_screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 800px;
+}
+
+#start_button {
+    padding: 10px 20px;
+    font-size: 20px;
+    color: balck;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#play_area h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    margin-top: 300px;
+}
+
+
+.game-over {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f0f8ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
