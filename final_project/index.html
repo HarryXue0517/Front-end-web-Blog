@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="title"><p>Memory</p></div>
+    
+    <select id="season">
+        <option value="all">Show All</option>
+        <option value="spring">Green</option>
+        <option value="summer">Orange</option>
+        <option value="autumn">Yellow</option>
+        <option value="winter">Blue</option>
+    </select>
+    <img src="images/add.png" id="add">
+    <div id="notes"></div>
+
+    <div id="menu">
+        <div id="menu_title"><h1>Add New Item</h1></div>
+
+        <div id="error"><p>Please completely fill out the form</p></div>
+        <div id="edit_title"><p>Title:</p></div>
+        <input id="user_title">
+
+        <div id="menu_category"><p>Category:</p></div>
+        <select id="user_category">
+            <option value="spring">Green</option>
+            <option value="summer">Orange</option>
+            <option value="autumn">Yellow</option>
+            <option value="winter">Blue</option>
+        </select>
+
+        <div id="menu_description"><p>Description:</p></div>
+        <textarea id="user_description"></textarea>
+        
+        <button id="save">Save</button>
+        <button id="cancle">Cancle</button>
+    </div>
+
+    <div id="overlay"></div>
+    <div id="view">
+        <div id="view_title"><h1></h1></div>
+        <p id="view_season"></p>
+        <p id="view_description"></p>
+        <hr id="view-divider">
+        <p id="creat_time"></p>
+        <p id="access_time"></p>
+        <button id="close_view">Close</button> <!-- 新增 Close 按钮 -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
