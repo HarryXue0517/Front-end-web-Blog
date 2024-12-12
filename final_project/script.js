@@ -26,8 +26,11 @@ seasonFilter.addEventListener('change', filterDivs);
 
 let view = document.querySelector('#view');
 
+
 document.addEventListener('DOMContentLoaded', () => {
     const savedItems = JSON.parse(localStorage.getItem('notes')) || [];
+    const store_isDark = localStorage.getItem('theme') === 'true';
+    isDark = store_isDark !== null ? store_isDark : true; // 如果存储值不存在，默认为 true
     savedItems.forEach(item => {
         const notes = document.getElementById('notes');
         const newDiv = document.createElement('div');
@@ -58,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         newDiv.appendChild(img);
         notes.appendChild(newDiv);
     });
+    applyTheme();
 });
 
 function filterDivs() {
@@ -231,4 +235,119 @@ function clear_menu() {
     hide_menu();
     hide_view();
 });
+let isDark = true;
+const bgToggleBtn = document.getElementById('bgToggle');
+const title = document.querySelector('#title');
+const seasonOptions = document.querySelectorAll('#season option');
+const store_isDark = localStorage.getItem('theme') === 'true';
+isDark = store_isDark !== null ? store_isDark : true; // 如果不存在，默认为 true（暗色模式）
+bgToggleBtn.addEventListener('click', () => {
+    const body = document.body;
+    // if (isDark) { // 亮色
+    //     body.style.backgroundColor = 'rgb(237, 237, 237)'; // Light background
+    //     body.style.color = '#000000'; // Dark text
+    //     bgToggleBtn.style.backgroundColor = 'rgb(222, 222, 222)';
+    //     bgToggleBtn.style.color = '#000000';
+    //     bgToggleBtn.innerHTML = 'Dark';
+    //     title.style.textShadow = '2px 2px 4px rgba(0, 0, 0, 0.3)';
+    //     title.style.color = 'rgb(34, 34, 34)';
+    //     seasonFilter.style.backgroundColor =  'rgb(222, 222, 222)';
+    //     seasonFilter.style.color = 'black';
+    //     menu.style.color = 'black';
+    //     menu.style.backgroundColor = 'white';
+    //     seasonOptions.forEach(option => {
+    //         option.style.backgroundColor = 'rgb(222, 222, 222)'; // 设置背景颜色
+    //         option.style.color = 'rgb(34, 34, 34)'; // 设置字体颜色
+    //     });
+    // } else { // 暗色
+    //     body.style.backgroundColor = '#232323'; // Original dark background
+    //     bgToggleBtn.style.backgroundColor = 'rgb(60, 60, 60)';
+    //     bgToggleBtn.style.color = 'white';
+    //     bgToggleBtn.innerHTML = 'Bright';
+    //     title.style.color = 'white';
+    //     seasonFilter.style.backgroundColor =  'rgb(60, 60, 60)';
+    //     seasonFilter.style.color = 'white';
+    //     seasonOptions.forEach(option => {
+    //         option.style.backgroundColor = 'rgb(60, 60, 60)'; // 设置背景颜色
+    //         option.style.color = 'rgb(255, 255, 255)'; // 设置字体颜色
+    //     });
+    // }
+    isDark = !isDark; // 切换主题
+    localStorage.setItem('theme', isDark); // 保存主题到 Local Storage
+    applyTheme(); // 应用新主题
+});
+
+let view_driver = document.querySelector('#view-divider');
+
+function applyTheme() {
+    const body = document.body;
+    if (isDark) { // 暗色模式
+        body.style.backgroundColor = '#232323';
+        body.style.color = '#FFFFFF';
+        bgToggleBtn.style.backgroundColor = 'rgb(60, 60, 60)';
+        bgToggleBtn.style.color = 'white';
+        bgToggleBtn.innerHTML = 'Bright';
+        title.style.color = 'white';
+        seasonFilter.style.backgroundColor = 'rgb(60, 60, 60)';
+        seasonFilter.style.color = 'white';
+        seasonOptions.forEach(option => {
+            option.style.backgroundColor = 'rgb(60, 60, 60)';
+            option.style.color = 'white';
+        });
+        menu.style.backgroundColor = '#232323';
+        menu.style.color = '#FFFFFF'
+        user_title.style.backgroundColor = '#333333';
+        user_title.style.color = '#f8f8f8';
+        user_category.style.backgroundColor = '#333333';
+        user_category.style.color = '#f8f8f8';
+        user_description.style.backgroundColor = '#333333';
+        user_description.style.color = '#f8f8f8';
+        save.style.backgroundColor = '#333333';
+        save.style.color = '#f8f8f8';
+        cancle.style.backgroundColor = '#333333';
+        cancle.style.color = '#f8f8f8';
+
+        view.style.backgroundColor = '#333333';
+        view.style.color = '#f8f8f8';
+        close_view.style.backgroundColor = 'rgb(60, 60, 60)';
+        close_view.style.color = 'white';
+
+        view_driver.style.border = '0.1px solid rgb(214, 214, 214)';
+    } else { // 明亮模式
+        body.style.backgroundColor = 'rgb(235, 234, 233)';
+        body.style.color = '#000000';
+        bgToggleBtn.style.backgroundColor = 'rgb(221, 219, 217)';
+        bgToggleBtn.style.color = '#000000';
+        bgToggleBtn.innerHTML = 'Dark';
+        title.style.color = 'rgba(0, 0, 0, 0.89)';
+        title.style.textShadow = '2px 2px 4px rgba(0, 0, 0, 0.3)';
+        seasonFilter.style.backgroundColor = 'rgb(221, 219, 217)';
+        seasonFilter.style.color = '#000000';
+        seasonOptions.forEach(option => {
+            option.style.backgroundColor = 'rgb(222, 222, 222)';
+            option.style.color = '#000000';
+        });
+        menu.style.backgroundColor = 'rgb(235, 234, 233)';
+        menu.style.color = 'rgba(0, 0, 0, 0.89)';
+        user_title.style.backgroundColor = 'rgb(221, 219, 217)';
+        user_title.style.color = 'black';
+        user_category.style.backgroundColor = 'rgb(221, 219, 217)';
+        user_category.style.color = 'black';
+        user_description.style.backgroundColor = 'rgb(221, 219, 217)';
+        user_description.style.color = 'black';
+        save.style.backgroundColor = 'rgb(221, 219, 217)';
+        save.style.color = 'black';
+        cancle.style.backgroundColor = 'rgb(221, 219, 217)';
+        cancle.style.color = 'black';
+
+        view.style.backgroundColor = 'rgb(235, 234, 233)';
+        view.style.color = 'rgba(0, 0, 0, 0.74)';
+        close_view.style.backgroundColor = 'rgb(221, 219, 217)';
+        close_view.style.color = '#000000';
+        
+        view_driver.style.border = '0.1px solid rgb(21, 21, 21)';
+    }
+}
+
+
   
